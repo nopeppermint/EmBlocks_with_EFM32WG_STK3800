@@ -2,7 +2,7 @@
 <EmBlocks_project_file>
 	<FileVersion major="1" minor="0" />
 	<Project>
-		<Option title="test" />
+		<Option title="blink" />
 		<Option pch_mode="2" />
 		<Option compiler="armgcc_eb" />
 		<Build>
@@ -27,7 +27,6 @@
 					<Add directory="..\..\..\..\..\emlib\inc" />
 					<Add directory="..\..\..\config" />
 					<Add directory="..\..\..\..\common\bsp" />
-					<Add directory="..\..\..\..\common\drivers" />
 				</Compiler>
 				<Assembler>
 					<Add option="-Wa,--gdwarf-2" />
@@ -80,34 +79,34 @@
 		<Unit filename="..\..\..\..\..\emlib\src\em_cmu.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_ebi.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="..\..\..\..\..\emlib\src\em_emu.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\..\..\..\..\emlib\src\em_gpio.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\..\..\..\emlib\src\em_lcd.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\..\..\..\emlib\src\em_rtc.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="..\..\..\..\..\emlib\src\em_system.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\..\..\..\..\emlib\src\em_vcmp.c">
+		<Unit filename="..\..\..\..\..\emlib\src\em_usart.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\clock.c">
+		<Unit filename="..\blink.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\bsp\bsp_bcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\bsp\bsp_stk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\common\bsp\bsp_stk_leds.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\..\..\..\common\bsp\bsp_trace.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\..\..\common\drivers\segmentlcd.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="..\..\..\..\common\drivers\vddcheck.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

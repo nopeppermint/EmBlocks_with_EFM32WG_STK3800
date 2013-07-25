@@ -2,7 +2,7 @@
 <EmBlocks_project_file>
 	<FileVersion major="1" minor="0" />
 	<Project>
-		<Option title="test" />
+		<Option title="gpiointerrupt" />
 		<Option pch_mode="2" />
 		<Option compiler="armgcc_eb" />
 		<Build>
@@ -23,10 +23,14 @@
 					<Add option="-Wall" />
 					<Add option="-O0" />
 					<Add option="-g3" />
+					<Add directory="..\" />
+					<Add directory="..\..\..\..\..\CMSIS\Include" />
 					<Add directory="..\..\..\..\..\Device\EnergyMicro\EFM32WG\Include" />
 					<Add directory="..\..\..\..\..\emlib\inc" />
-					<Add directory="..\..\..\config" />
 					<Add directory="..\..\..\..\common\bsp" />
+					<Add directory="..\..\..\..\common\drivers" />
+					<Add directory="..\..\..\config" />
+					<Add directory="..\..\..\..\..\emdrv\gpiointerrupt\inc" />
 				</Compiler>
 				<Assembler>
 					<Add option="-Wa,--gdwarf-2" />
@@ -55,14 +59,12 @@
 		</Build>
 		<Device>
 			<Add option="$device=cortex-m4f" />
+			<Add option="$lscript=efm32wg.ld" />
 			<Add option="$stack=0x0100" />
 			<Add option="$heap=0x0000" />
-			<Add option="$lscript=efm32wg.ld" />
 		</Device>
 		<Compiler>
 			<Add option="-DEFM32WG990F256" />
-			<Add directory=".\Inc" />
-			<Add directory="$(APPDATA)\energymicro\Device\EnergyMicro\efm32wg\Include" />
 		</Compiler>
 		<Linker>
 			<Add option="-eb_start_files" />
@@ -71,6 +73,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\..\..\..\..\Device\EnergyMicro\EFM32WG\Source\system_efm32wg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\emdrv\gpiointerrupt\src\gpiointerrupt.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\..\..\..\..\emlib\src\em_assert.c">
@@ -88,13 +93,16 @@
 		<Unit filename="..\..\..\..\..\emlib\src\em_gpio.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="..\..\..\..\..\emlib\src\em_int.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="..\..\..\..\..\emlib\src\em_system.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\..\..\..\..\emlib\src\em_usart.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\blink.c">
+		<Unit filename="..\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="..\..\..\..\common\bsp\bsp_bcc.c">
