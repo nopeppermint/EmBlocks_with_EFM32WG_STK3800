@@ -20,6 +20,10 @@ Copy all the emblocks folders into the corresponding examples in
 $(APPDATA)\Roaming\energymicro\kits\EFM32WG_STK3800
 
 __________________________________________________________________
+Version___0.3___25.07.2013___
+
+-add inttemp, lcd,lcsense, lightsense, mpu, nvm_simple, powertest
+
 Version___0.2___25.07.2013___
 
 -add burtc, emlcd, emode, energy and gpiointerrupt example
