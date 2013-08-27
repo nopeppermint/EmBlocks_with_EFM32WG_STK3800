@@ -32,3 +32,6 @@ Version___0.2___25.07.2013___
 Version___0.1___23.07.2013___
 
 -add blink and clock example
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nopeppermint/emblocks_with_efm32wg_stk3800/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
